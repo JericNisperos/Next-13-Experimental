@@ -16,14 +16,14 @@ function Navbar() {
 
   useEffect(() => {
     async function fetchData() {
-      const data = await fetch(`https://play.mine-smp.me:25571/v1/serverOverview?server=MineCommunity%20Guilds`);
+      const data = await fetch(`http://play.mine-smp.me:25571/v1/serverOverview?server=MineCommunity%20Guilds`);
       const res = await data.json();
       setTotalPlayers(res.numbers.online_players);
       setIPAddress(`PLAY.MINE-SMP.ME`);
       console.log(res);
     }
     fetchData();
-  }, [navMobile]);
+  }, [totalPlayers]);
 
   function NavItems({ href, icon, title }) {
     return (
