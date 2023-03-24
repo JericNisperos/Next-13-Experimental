@@ -23,7 +23,7 @@ function Navbar() {
       console.log(res);
     }
     fetchData();
-  }, [totalPlayers]);
+  }, [navMobile]);
 
   function NavItems({ href, icon, title }) {
     return (
