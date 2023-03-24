@@ -1,146 +1,95 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord, faGoodreads } from "@fortawesome/free-brands-svg-icons";
-import { faGamepad, faHouse, faPeopleGroup, faShop } from "@fortawesome/free-solid-svg-icons";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { faBars, faGamepad, faHamburger, faHouse, faPeopleGroup, faPerson, faShop } from "@fortawesome/free-solid-svg-icons";
+import { MenuButton } from "./MenuButton";
 
 function Navbar() {
   const router = useRouter();
-  const [IPAddress, setIPAddress] = useState("PLAY.MINE-SMP.ME");
+  const [IPAddress, setIPAddress] = useState(`PLAY.MINE-SMP.ME`);
+  const [navMobile, setNavMobile] = useState(false);
+  const [totalPlayers, setTotalPlayers] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await fetch(`http://play.mine-smp.me:25571/v1/serverOverview?server=MineCommunity%20Guilds`);
+      const res = await data.json();
+      setTotalPlayers(res.numbers.online_players);
+      setIPAddress(`PLAY.MINE-SMP.ME`);
+      console.log(res);
+    }
+    fetchData();
+  }, [totalPlayers]);
+
+  function NavItems({ href, icon, title }) {
+    return (
+      <Link href={href} onClick={() => setNavMobile(!navMobile)}>
+        <li className={`text-white font-extrabold  px-3 py-2 ${router.pathname === href ? "bg-blue-500  rounded-md border-solid border-2 border-blue-500 hover:text-white" : "hover:text-blue-500"}`}>
+          <FontAwesomeIcon icon={icon} className="text-md" /> {title}
+        </li>
+      </Link>
+    );
+  }
   return (
     <div>
       <nav className="w-full bg-gray-800 shadow">
         <div className="justify-between px-4 mx-auto lg:max-w-5 md:items-center md:flex md:px-8">
-          <div
-            alt="Icon and Name"
-            className="flex items-center justify-between py-3 md:py-5 md:block flex-no-wrap"
-          >
-            <motion.div
-              whileHover={{
-                scale: 1.1,
-                transition: { duration: 0.5 },
-              }}
-              transition={{ type: "spring", stiffness: 200, damping: 10 }}
-              className="flex items-center"
-            >
-              <Image
-                src="https://media.discordapp.net/attachments/1083083786704658472/1088132326732607609/MineCommunity_Icon.png"
-                width="48"
-                height="48"
-                alt="logo"
-                className="flex-shrink-0 rounded-md"
-              />
-              <a href="#" className="text-2xl text-white font-bold ml-2">
+          <div alt="Icon and Name" className="flex items-center justify-between py-3 md:py-5 md:block flex-no-wrap">
+            <motion.div whileHover={{ scale: 1.1, transition: { duration: 0.5 } }} transition={{ type: "spring", stiffness: 200, damping: 10 }} className="flex items-center">
+              <Image src="https://media.discordapp.net/attachments/1083083786704658472/1088132326732607609/MineCommunity_Icon.png" width="48" height="48" alt="logo" className="flex-shrink-0 rounded-md" />
+              <Link href="/" className="text-2xl text-white font-bold ml-2">
                 MineCommunity
-              </a>
+              </Link>
             </motion.div>
-            <div className="md:hidden">
-              <button className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"></button>
-            </div>
+            <button className="md:hidden px-3 py-2 text-white rounded-md outline-none focus:border-gray-400 focus:border">
+              <MenuButton isOpen={navMobile} onClick={() => setNavMobile(!navMobile)} className="md:hidden px-3 py-2 text-white rounded-md outline-none focus:border-gray-400 focus:border" />
+            </button>
           </div>
-          <div>
-            <motion.div
-              initial={{ opacity: 0, scale: 1 }}
-              animate={{ opacity: 1, scale: 1.1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div
-                className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 `}
-              >
+          <div alt="Navbar Options" className={` ${!navMobile ? "hidden md:block" : " "}`}>
+            <motion.div initial={{ opacity: 1, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
+              <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 `}>
                 <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                  {/* <motion.div
-                    whileHover={{
-                      scale: 1.1,
-                      transition: { duration: 0.5 },
-                    }}
-                    transition={{ type: "spring", stiffness: 200, damping: 10 }}
-                  > */}
-                    <li
-                      className={`text-white font-extrabold  px-3 py-2 ${
-                        router.pathname === "/"
-                          ? "bg-blue-500  rounded-md border-solid border-2 border-blue-500"
-                          : " "
-                      }`}
-                    >
-                        <FontAwesomeIcon icon={faHouse} className="text-md"/>
-                      <Link href="/">  HOME</Link>
-                    </li>
-                  {/* </motion.div> */}
-                  {/* <motion.div
-                    whileHover={{
-                      scale: 1.1,
-                      transition: { duration: 0.5 },
-                    }}
-                    transition={{ type: "spring", stiffness: 200, damping: 10 }}
-                  > */}
-                    <li
-                      className={`text-white font-extrabold  px-3 py-2 ${
-                        router.pathname === "/shop"
-                          ? "bg-blue-500  rounded-md border-solid border-2 border-blue-500"
-                          : " "
-                      }`}
-                    >
-                        <FontAwesomeIcon icon={faShop} className="text-md"/>
-                      <Link href="/shop">  SHOP</Link>
-                    </li>
-                  {/* </motion.div> */}
-                  {/* <motion.div
-                    whileHover={{
-                      scale: 1.1,
-                      transition: { duration: 0.5 },
-                    }}
-                    transition={{ type: "spring", stiffness: 200, damping: 10 }}
-                  > */}
-                    <li
-                      className={`text-white font-extrabold  px-3 py-2 ${
-                        router.pathname === "/guides"
-                          ? "bg-blue-500  rounded-md border-solid border-2 border-blue-500"
-                          : " "
-                      }`}
-                    >
-                    <FontAwesomeIcon icon={faGamepad} className="text-md"/>
-                      <Link href="/guides">  GUIDES</Link>
-                      
-                    </li>
-                  {/* </motion.div> */}
-                  {/* <motion.div
-                    whileHover={{
-                      scale: 1.1,
-                      transition: { duration: 0.5 },
-                    }}
-                    transition={{ type: "spring", stiffness: 200, damping: 10 }}
-                  > */}
-                    <li
-                      className={`text-white font-extrabold  px-3 py-2 ${
-                        router.pathname === "/about"
-                          ? "bg-blue-500  rounded-md border-solid border-2 border-blue-500"
-                          : " "
-                      }`}
-                    >
-                        <FontAwesomeIcon icon={faPeopleGroup} className="text-md"/>
-                      <Link href="/about">  ABOUT US</Link>
-                    </li>
-                  {/* </motion.div> */}
+                  <NavItems href="/" icon={faHouse} title="HOME" />
+                  <NavItems href="/shop" icon={faShop} title="SHOP" />
+                  <NavItems href="/guides" icon={faGamepad} title="GUIDES" />
+                  <NavItems href="/about" icon={faPeopleGroup} title="ABOUT US" />
+                  <div className={`text-white items-center flex justify-between ${!navMobile ? "hidden" : " "}`}>
+                    <div className="bg-blue-500 px-4 py-2 items-center justify-between rounded-md cursor-pointer bg-discord">
+                      <FontAwesomeIcon icon={faDiscord} />
+                      &nbsp;Discord
+                    </div>
+                    <div>
+                      <motion.a
+                        className="text-white font-extrabold px-3 py-2 bg-blue-500  rounded-md border-solid border-2 border-blue-500 cursor-pointer"
+                        onClick={() => {
+                          navigator.clipboard.writeText("play.mine-smp.me");
+                          IPAddress === "PLAY.MINE-SMP.ME" ? setIPAddress("📋 Copied!") : setIPAddress("PLAY.MINE-SMP.ME");
+                        }}
+                      >
+                        {IPAddress}&nbsp; | <FontAwesomeIcon icon={faPerson} size="xs" /> {totalPlayers}
+                      </motion.a>
+                    </div>
+                  </div>
                 </ul>
               </div>
             </motion.div>
           </div>
-          <div alt="discord tska IP">
-            <a className="text-white fa-xs hover:text-black">
-              {/* <FontAwesomeIcon icon={faDiscord} size="xs" /> */}
+          <div alt="discord tska IP" className="hidden md:block">
+            <a className="text-white mx-4 bg-discord px-3 py-2 rounded-lg cursor-pointer " href="https://discord.com/invite/minecommunity" target="_blank">
+              <FontAwesomeIcon icon={faDiscord} />
             </a>
             <motion.a
               className="text-white font-extrabold px-3 py-2 bg-blue-500  rounded-md border-solid border-2 border-blue-500 cursor-pointer"
               onClick={() => {
-                IPAddress === "PLAY.MINE-SMP.ME"
-                  ? setIPAddress("📋 Copied!")
-                  : setIPAddress("PLAY.MINE-SMP.ME");
+                navigator.clipboard.writeText("play.mine-smp.me");
+                IPAddress === "PLAY.MINE-SMP.ME" ? setIPAddress("📋 Copied!") : setIPAddress("PLAY.MINE-SMP.ME");
               }}
             >
-              {IPAddress}
+              {IPAddress}&nbsp; | <FontAwesomeIcon icon={faPerson} size="xs" /> {totalPlayers}
             </motion.a>
           </div>
         </div>
