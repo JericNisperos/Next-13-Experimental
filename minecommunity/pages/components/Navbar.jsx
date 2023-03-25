@@ -21,12 +21,7 @@ function Navbar() {
     async function fetchData() {
       const data = await fetch("/api/plan");
       const res = await data.json();
-      // const res = await handler({}, {
-      //   json: (data) => setData(data)
-      // });
       setTotalPlayers(res.numbers.online_players);
-      setIPAddress(`PLAY.MINE-SMP.ME`);
-      console.log(res);
     }
     fetchData();
   }, [totalPlayers]);
@@ -48,7 +43,7 @@ function Navbar() {
 <main>
     <div>
       <nav className="w-full shadow">
-        <div className="justify-between px-4 mx-auto lg:max-w-5 md:items-center md:flex md:px-8">
+        <div className="justify-between px-4 lg:max-w-5 md:items-center md:flex md:px-8 md:mx-48" >
           <div alt="Icon and Name" className="flex items-center justify-between py-3 md:py-5 md:block flex-no-wrap">
             <motion.div whileHover={{ scale: 1.1, transition: { duration: 0.5 } }} transition={{ type: "spring", stiffness: 200, damping: 10 }} className="flex items-center">
               <Image src="https://media.discordapp.net/attachments/1083083786704658472/1088132326732607609/MineCommunity_Icon.png" width="48" height="48" alt="logo" className="flex-shrink-0 rounded-md" />
