@@ -28,10 +28,6 @@ function Navbar() {
 
   function NavItems({ href, icon, title }) {
     return (
-<<<<<<< HEAD
-
-=======
->>>>>>> f36ab5d55964d30ba8a1e52b693efb1d517a1007
       <Link href={href} onClick={() => setNavMobile(false)}>
         <li className={`text-white font-extrabold  px-3 py-2 ${router.pathname === href ? "bg-blue-500  rounded-md border-solid border-2 border-blue-500 hover:text-white" : "hover:text-blue-500"}`}>
           <FontAwesomeIcon icon={icon} className="text-md" /> {title}
