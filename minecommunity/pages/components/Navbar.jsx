@@ -13,7 +13,7 @@ function Navbar() {
   const [IPAddress, setIPAddress] = useState(`PLAY.MINE-SMP.ME`);
   const [navMobile, setNavMobile] = useState(false);
   const [totalPlayers, setTotalPlayers] = useState(null);
-
+  const res1 = plan
   useEffect(() => {
     async function fetchData() {
       const data = await fetch("http://play.mine-smp.me:25571/v1/serverOverview?server=MineCommunity%20Guilds");
@@ -41,7 +41,7 @@ function Navbar() {
 </Head>
 <main>
     <div>
-      <nav className="w-full bg-gray-800 shadow">
+      <nav className="w-full shadow">
         <div className="justify-between px-4 mx-auto lg:max-w-5 md:items-center md:flex md:px-8">
           <div alt="Icon and Name" className="flex items-center justify-between py-3 md:py-5 md:block flex-no-wrap">
             <motion.div whileHover={{ scale: 1.1, transition: { duration: 0.5 } }} transition={{ type: "spring", stiffness: 200, damping: 10 }} className="flex items-center">
