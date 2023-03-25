@@ -12,4 +12,8 @@ const nextConfig = {
   },
 }
 
+const ContentSecurityPolicy = `
+  content 'upgrade-insecure-requests'; 
+`
+
 module.exports = nextConfig
