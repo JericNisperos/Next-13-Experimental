@@ -10,6 +10,9 @@ const nextConfig = {
       },
     ],
   },
+  // httpAgentOptions: {
+  //   rejectUnauthorized: false,
+  // }
 }
 
 // const ContentSecurityPolicy = `

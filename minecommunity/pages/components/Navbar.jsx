@@ -8,7 +8,6 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faGamepad, faHamburger, faHouse, faPeopleGroup, faPerson, faShop } from "@fortawesome/free-solid-svg-icons";
 import MenuButton from "./MenuButton";
 import Head from "next/head";
-
 function Navbar() {
   const router = useRouter();
   const [IPAddress, setIPAddress] = useState(`PLAY.MINE-SMP.ME`);
@@ -17,7 +16,7 @@ function Navbar() {
 
   useEffect(() => {
     async function fetchData() {
-      const data = await fetch(`http://play.mine-smp.me:25571/v1/serverOverview?server=MineCommunity%20Guilds`);
+      const data = await fetch("http://play.mine-smp.me:25571/v1/serverOverview?server=MineCommunity%20Guilds");
       const res = await data.json();
       setTotalPlayers(res.numbers.online_players);
       setIPAddress(`PLAY.MINE-SMP.ME`);
