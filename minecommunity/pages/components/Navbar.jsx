@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faGamepad, faHamburger, faHouse, faPeopleGroup, faPerson, faShop } from "@fortawesome/free-solid-svg-icons";
 import MenuButton from "./MenuButton";
+import Head from "next/head";
 
 function Navbar() {
   const router = useRouter();
@@ -27,6 +28,7 @@ function Navbar() {
 
   function NavItems({ href, icon, title }) {
     return (
+
       <Link href={href} onClick={() => setNavMobile(false)}>
         <li className={`text-white font-extrabold  px-3 py-2 ${router.pathname === href ? "bg-blue-500  rounded-md border-solid border-2 border-blue-500 hover:text-white" : "hover:text-blue-500"}`}>
           <FontAwesomeIcon icon={icon} className="text-md" /> {title}
@@ -35,6 +37,11 @@ function Navbar() {
     );
   }
   return (
+    <>
+    <Head>
+    {/* <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" /> */}
+</Head>
+<main>
     <div>
       <nav className="w-full bg-gray-800 shadow">
         <div className="justify-between px-4 mx-auto lg:max-w-5 md:items-center md:flex md:px-8">
@@ -95,6 +102,8 @@ function Navbar() {
         </div>
       </nav>
     </div>
+    </main>
+    </>
   );
 }
 

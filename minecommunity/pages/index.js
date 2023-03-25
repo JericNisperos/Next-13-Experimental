@@ -10,7 +10,7 @@ export default function Home() {
         <title>MineCommunity</title>
         <meta name="description" content="Made by Cyanice Blitz Corps" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        {/* <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" /> */}
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <main>
