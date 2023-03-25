@@ -13,7 +13,6 @@ function Navbar() {
   const [IPAddress, setIPAddress] = useState(`PLAY.MINE-SMP.ME`);
   const [navMobile, setNavMobile] = useState(false);
   const [totalPlayers, setTotalPlayers] = useState(null);
-  const res1 = plan
   useEffect(() => {
     async function fetchData() {
       const data = await fetch("http://play.mine-smp.me:25571/v1/serverOverview?server=MineCommunity%20Guilds");
