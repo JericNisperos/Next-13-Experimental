@@ -20,14 +20,6 @@ function HomePage() {
     hover: { scale: 1.1 },
   };
 
-  const variants_javaIP = {
-    initial: {
-      y: 0,
-    },
-    hover: {
-      y: -20,
-    },
-  };
 
   return (
     <div className="text-white ">
