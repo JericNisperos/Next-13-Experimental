@@ -14,7 +14,7 @@ function Navbar() {
   const router = useRouter();
   const [IPAddress, setIPAddress] = useState(`PLAY.MINE-SMP.ME`);
   const [navMobile, setNavMobile] = useState(false);
-  const [totalPlayers, setTotalPlayers] = useState(null);
+  const [totalPlayers, setTotalPlayers] = useState("64");
   const [data, setData] = useState();
   useEffect(() => {
     async function fetchData() {
