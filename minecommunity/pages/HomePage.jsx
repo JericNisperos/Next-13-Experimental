@@ -20,7 +20,6 @@ function HomePage() {
     hover: { scale: 1.1 },
   };
 
-
   return (
     <div className="text-white ">
       <motion.div className=" mx-auto justify-center items-center flex flex-nowrap rounded-md content-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
@@ -40,10 +39,11 @@ function HomePage() {
         <div className="rounded-lg flex flex-col justify-center items-center mx-4 ">
           <h1 className="text-red-400 text-2xl md:text-6xl font-extrabold items-center justify-center text-center">⚔︎ 1.19.4 Survival Guild Realms</h1>
           <p className="my-6 mx-4 text-justify text-m">
-            &nbsp;&nbsp;&nbsp;&nbsp;A thrilling Survival Realms that offers a unique and immersive RPG gameplay experience. Here, players can create powerful Guilds to play with friends and conquer enemies as a team. With the added feature
-            of Pets, players can train and customize their companions to aid them in their quests. The server also includes Custom Enchantments and unique skills to add to the excitement. In order to unlock new features, players must rank
-            up by successfully completing challenges and tasks. But the excitement doesn't stop there - players can also explore the Hunting Ground and battle fierce Bosses to obtain legendary items and gain even more power. So join us on
-            the 1.19.4 Minecraft Server and let the adventure begin!
+            &nbsp;&nbsp;&nbsp;&nbsp;A thrilling Survival Realms that offers a unique and immersive RPG gameplay experience. Here, players can create powerful <span className="text-lime-400">Guilds</span> to play with friends and conquer
+            enemies as a team. With the added feature of <span className="text-blue-500">Pets</span>, players can train and customize their companions to aid them in their <span className="text-orange-400">Quests</span>. The server also
+            includes <span className="text-purple-400">Custom Enchantments</span> and unique <span className="text-yellow-400">Skills</span> to add to the excitement. In order to unlock new features, players must
+            <span className="text-emerald-400"> Rank up</span> by successfully completing challenges and tasks. But the excitement doesn't stop there - players can also explore the <span className="text-amber-400">Hunting Ground</span> and
+            battle fierce <span className="text-red-400">Bosses</span> to obtain <span className="text-green-400">Relic Items</span> and gain even more power. So join us on the 1.19.4 Minecraft Server and let the adventure begin!
           </p>
           <motion.p whileHover={{ scale: 1.1 }} className="md:text-2xl font-extrabold cursor-pointer">
             {" "}
@@ -54,7 +54,7 @@ function HomePage() {
             <span className="text-red-400">BEDROCK:</span> mine-smp.me <span className="text-gray-500">Port: 25569</span>
           </motion.p>
         </div>
-        <div className="rounded-lg col-span-2 mt-12 md:mt-0">
+        <div className="rounded-lg col-span-2 mt-12 md:mt-0 md:py-2">
           <div className="object-scale-down md:h-full md:w-full md:relative rounded-md">
             {images.map((image, index) => (
               <motion.img
@@ -69,7 +69,7 @@ function HomePage() {
                 whileHover="hover"
               />
             ))}
-            <div className="absolute bottom-0 left-0 right-0 flex justify-center space-x-4 mb-4 md:mb-12">
+            <div className="absolute bottom-0 left-0 right-0 flex justify-center space-x-4 mb-4 md:mb-8">
               {images.map((_, index) => (
                 <button key={index} className={`w-4 h-4 rounded-full ${activeImage === index ? "bg-gray-800" : "bg-gray-300"}`} onClick={() => setActiveImage(index)} />
               ))}
