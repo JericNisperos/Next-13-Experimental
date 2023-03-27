@@ -4,21 +4,23 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import GuideItems from "./components/GuideItems";
 function guides() {
+
+  
   return (
     <div>
       <motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:mx-96 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:mx-96 mt-12 overflow-hidden">
           
-          <GuideItems title="Rules" bgcolor="bg-red-300" id="map-sprite"/>
-          <GuideItems title="Enchants" bgcolor="bg-purple-300" id="enchant-sprite"/>
-          <GuideItems title="Eternal Sets" bgcolor="bg-purple-300" id="sets-sprite"/>
-          <GuideItems title="Skills" bgcolor="bg-amber-300" id="sword-sprite"/>
-          <GuideItems title="Pets" bgcolor="bg-green-300" id="pets-sprite"/>
-          <GuideItems title="Hunting Ground" bgcolor="bg-red-300" id="hunt-sprite"/>
-          <GuideItems title="Rankup" bgcolor="bg-purple-300" id="rankup-sprite"/>
-          <GuideItems title="Relics" bgcolor="bg-purple-300" id="relics-sprite"/>
+          <GuideItems title="Rules" bgcolor="bg-red-300" id="map-sprite" delay={0}/>
+          <GuideItems title="Enchants" bgcolor="bg-purple-300" id="enchant-sprite" delay={0.1}/>
+          <GuideItems title="Eternal Sets" bgcolor="bg-purple-300" id="sets-sprite" delay={0.2}/>
+          <GuideItems title="Skills" bgcolor="bg-amber-300" id="sword-sprite" delay={0.3}/>
+          <GuideItems title="Pets" bgcolor="bg-green-300" id="pets-sprite" delay={0.4}/>
+          <GuideItems title="Hunting Ground" bgcolor="bg-red-300" id="hunt-sprite" delay={0.5}/>
+          <GuideItems title="Rankup" bgcolor="bg-purple-300" id="rankup-sprite" delay={0.6}/>
+          <GuideItems title="Relics" bgcolor="bg-purple-300" id="relics-sprite" delay={0.7}/>
 
-          <GuideItems title="Others" bgcolor="bg-purple-300" id="others-sprite"/>
+          <GuideItems title="Others" bgcolor="bg-purple-300" id="others-sprite" delay={0.8}/>
 
 
 

@@ -30,10 +30,10 @@ function HomePage() {
 
   return (
     <div className="text-white ">
-      <motion.div className=" mx-auto justify-center items-center flex flex-nowrap rounded-md content-center" whileHover={{ scale: 1.05 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-        <div>
+      <motion.div className=" mx-auto justify-center items-center flex flex-nowrap rounded-md content-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+        <motion.div whileHover={{ scale: 1.03 }} >
           <Image className="rounded-md" src="https://media.discordapp.net/attachments/1083083786704658472/1083083816475840512/wwwww.png?width=1084&height=610" alt="cover" width="1084" height="610" />
-        </div>
+        </motion.div>
       </motion.div>
 
       <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-white flex text-2xl font-proxima font-extrabold mt-2">
@@ -63,16 +63,14 @@ function HomePage() {
               <span className="text-emerald-400"> Rank up</span> by successfully completing challenges and tasks. But the excitement doesn't stop there - players can also explore the <span className="text-amber-400">Hunting Ground</span>{" "}
               and battle fierce <span className="text-red-400">Bosses</span> to obtain <span className="text-green-400">Relic Items</span> and gain even more power. So join us on the 1.19.4 Minecraft Server and let the adventure begin!
             </p>
-            <motion.p whileHover={{ scale: 1.1 }} className="md:text-2xl font-extrabold cursor-pointer">
-              {" "}
+            <motion.p whileHover={{ scale: 1.1 }} className="md:text-2xl font-extrabold cursor-pointer text-center flex mx-auto">
               <span className="text-red-400">JAVA:</span> play.mine-smp.me <span className="text-gray-500">(1.8 - 1.19.4)</span>
             </motion.p>
             <motion.p whileHover={{ scale: 1.1 }} className="md:text-2xl font-extrabold cursor-pointer">
-              {" "}
               <span className="text-red-400">BEDROCK:</span> mine-smp.me <span className="text-gray-500">Port: 25569</span>
             </motion.p>
           </div>
-          <div className="rounded-lg col-span-2 mt-12 md:mt-0 md:py-2 hidden md:block">
+          <motion.div whileHover={{ scale: 1.02 }} className="rounded-lg col-span-2 mt-12 md:mt-0 md:py-2 hidden md:block">
             <div className="object-scale-down md:h-full md:w-full md:relative rounded-md">
               {images.map((image, index) => (
                 <motion.img
@@ -93,7 +91,7 @@ function HomePage() {
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
 
