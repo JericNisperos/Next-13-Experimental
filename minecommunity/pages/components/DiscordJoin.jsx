@@ -1,9 +1,11 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 function DiscordJoin() {
+  
+
   return (
     <div>
       <motion.div initial={{ y: "10%" }} animate={{ y: 0 }} transition={{ duration: 0.5 }} className=" h-80 rounded-lg mx-auto p-8 grid grid-cols-1 lg:grid-cols-3 md:mx-96 mt-8 cursor-default ">
@@ -18,10 +20,16 @@ function DiscordJoin() {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here in MineCommunity, we believe that great things happen when Minecraft enthusiasts come together to share ideas and connect. That's why we invite you to
             join our Discord community, where you'll have the opportunity to share your thoughts, collaborate with other players, and stay up-to-date on the latest Minecraft news, events, and exclusive rewards. Whether you're a seasoned
             player or just starting out, you'll find a warm and welcoming community here in MineCommunity. So don't wait - join us on Discord today and start sharing your ideas and exploring the endless possibilities of Minecraft!
-            <motion.button  whileHover={{scale: 1.1}} className="flex items-center text-center mt-4 mx-auto border-2 border-blue-400 bg-blue-400 px-3 py-2 rounded-lg text-white bg-discord"  href="https://discord.com/invite/minecommunity" target="_blank"><FontAwesomeIcon icon={faDiscord} /> &nbsp;Join Discord</motion.button>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              className="flex items-center text-center mt-4 mx-auto border-2 border-blue-400 bg-blue-400 px-3 py-2 rounded-lg text-white bg-discord"
+              href="https://discord.com/invite/minecommunity"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faDiscord} /> &nbsp;Join Discord
+            </motion.button>
           </div>
         </div>
-        
       </motion.div>
     </div>
   );

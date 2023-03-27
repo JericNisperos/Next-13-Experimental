@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import DiscordJoin from "./components/DiscordJoin";
 
 function HomePage() {
@@ -27,11 +27,11 @@ function HomePage() {
     exit: { x: "-0%" },
     // hover: { scale: 1.1 },
   };
-
+ 
   return (
     <div className="text-white ">
       <motion.div className=" mx-auto justify-center items-center flex flex-nowrap rounded-md content-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-        <motion.div whileHover={{ scale: 1.03 }} >
+        <motion.div whileHover={{ scale: 1.03 }}>
           <Image className="rounded-md" src="https://media.discordapp.net/attachments/1083083786704658472/1083083816475840512/wwwww.png?width=1084&height=610" alt="cover" width="1084" height="610" />
         </motion.div>
       </motion.div>
@@ -39,19 +39,14 @@ function HomePage() {
       <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-white flex text-2xl font-proxima font-extrabold mt-2">
         <h1 className="flex mx-auto content-center text-center text-xl md:text-1xl">MineCommunity</h1>
       </motion.div>
-      <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-white flex text-xl italic font-proxima">
-        <h1 className="flex mx-auto content-center text-center ">"Mining Creativity, Building Community</h1>
+      <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-white flex italic font-proxima">
+        <h1 className="flex mx-auto content-center text-center text-md">"Mining Creativity, Building Community"</h1>
       </motion.div>
       <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className=" flex text-4xl mt-8 md:mt-12 font-proxima">
         <h1 className="flex mx-auto content-center text-center text-zinc-200"></h1>
       </motion.div>
-      {/* <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className=" flex text-4xl mt-8 md:mt-12 font-proxima">
-      <h1 className="flex mx-auto content-center text-center text-zinc-200 font-extrabold">Available Server</h1>
-      </motion.div> */}
       <motion.div initial={{ y: "10%" }} animate={{ y: 0 }} transition={{ duration: 0.5 }} className="border-red-400 border-b-4 px-8 py-4 md:mx-48 cursor-default bg-zinc-800 rounded-lg">
-        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className=" flex text-4xl font-proxima">
-          {/* <h1 className="flex mx-auto content-center text-center text-zinc-200 font-extrabold">Available Gamemode</h1> */}
-        </motion.div>
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className=" flex text-4xl font-proxima"></motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3">
           <div className="rounded-lg flex flex-col justify-center items-center mx-4 ">
@@ -95,7 +90,7 @@ function HomePage() {
         </div>
       </motion.div>
 
-      <div className="py-100 min-h-screen map-sprite">
+      <div className="">
         <DiscordJoin />
       </div>
     </div>

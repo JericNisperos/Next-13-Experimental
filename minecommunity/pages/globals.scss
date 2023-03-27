@@ -17,8 +17,22 @@ body {
   scrollbar-color: rgb(114, 137, 218) white;
 }
 
-:-webkit-scrollbar-thumb {
-  background-color: red;
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(31, 31, 31);
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(114, 137, 218);
 }
 
 .bg-discord {
