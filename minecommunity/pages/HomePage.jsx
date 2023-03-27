@@ -9,7 +9,7 @@ function HomePage() {
     { id: 2, src: "https://media.discordapp.net/attachments/1083083786704658472/1084846871589171240/image.png?width=1283&height=676", alt: "Image 2" },
     { id: 3, src: "https://media.discordapp.net/attachments/1083083786704658472/1084846993911853116/image.png?width=1276&height=676", alt: "Image 3" },
     { id: 4, src: "https://1media.discordapp.net/attachments/1083083786704658472/1084846993911853116/image.png?width=1276&height=676", alt: "Image 4" },
-    { id: 4, src: "https://1media.discordapp.net/attachments/1083083786704658472/1084846993911853116/image.png?width=1276&height=676", alt: "Image 5" },
+    { id: 5, src: "https://1media.discordapp.net/attachments/1083083786704658472/1084846993911853116/image.png?width=1276&height=676", alt: "Image 5" },
   ];
 
   const [activeImage, setActiveImage] = useState(0);
@@ -97,7 +97,7 @@ function HomePage() {
         </div>
       </motion.div>
 
-      <div className="py-100 min-h-screen">
+      <div className="py-100 min-h-screen map-sprite">
         <DiscordJoin />
       </div>
     </div>
