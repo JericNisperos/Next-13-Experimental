@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import DiscordJoin from "./components/DiscordJoin";
+import Footer from "./components/Footer";
 
 function HomePage() {
   const images = [
@@ -93,6 +94,7 @@ function HomePage() {
       <div className="">
         <DiscordJoin />
       </div>
+      
     </div>
   );
 }

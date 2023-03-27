@@ -1,11 +1,8 @@
-import React from 'react'
-import Navbar from './components/Navbar'
+import React from "react";
+import Navbar from "./components/Navbar";
 
 function about() {
-  return (
-    <div>
-        Nothing to see here I think?</div>
-  )
+  return <div className="min-h-screen"></div>;
 }
 
-export default about
+export default about;
