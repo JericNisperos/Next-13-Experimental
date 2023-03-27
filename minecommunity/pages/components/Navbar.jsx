@@ -61,7 +61,7 @@ function Navbar() {
                       <NavItems href="/guides" icon={faGamepad} title="GUIDES" />
                       <NavItems href="/about" icon={faPeopleGroup} title="ABOUT US" />
                       <div className={`text-white items-center flex justify-between mx-4 ${!navMobile ? "hidden" : " "}`}>
-                        <div className="bg-blue-500 px-4 py-2 items-center justify-between rounded-md cursor-pointer bg-discord">
+                        <div className="bg-blue-500 px-4 py-2 items-center justify-between rounded-md cursor-pointer bg-discord"  href="https://discord.com/invite/minecommunity" target="_blank">
                           <FontAwesomeIcon icon={faDiscord} />
                         </div>
                         <div>
