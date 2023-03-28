@@ -41,15 +41,15 @@ function ServerInfo() {
             battle fierce <span className="text-red-400">Bosses</span> to obtain <span className="text-green-400">Relic Items</span> and gain even more power. So join us on the 1.19.4 Minecraft Server and let the adventure begin!
           </p>
           <div className="grid grid-cols-1 nd:grid-cols-2 md:px-24">
-            <motion.p whileHover={{ scale: 1.1 }} className="text-2xl md:text-3xl font-extrabold cursor-pointer text-center flex mx-auto">
+            <motion.p whileHover={{ scale: 1.1 }} className="text-lg md:text-3xl font-extrabold cursor-pointer text-center flex mx-auto">
               <span className="text-red-400">JAVA: &nbsp;&nbsp;</span> play.mine-smp.me <span className="text-gray-300">&nbsp;&nbsp;(1.8 - 1.19.4)</span>
             </motion.p>
-            <motion.p whileHover={{ scale: 1.1 }} className=" text-2xl md:text-3xl font-extrabold cursor-pointer  flex mx-auto">
+            <motion.p whileHover={{ scale: 1.1 }} className="text-lg md:text-3xl font-extrabold cursor-pointer flex mx-auto">
               <span className="text-red-400">BEDROCK:&nbsp;&nbsp;</span> mine-smp.me <span className="text-gray-300"> &nbsp;&nbsp; Port: 25569</span>
             </motion.p>
           </div>
         </div>
-        <motion.div whileHover={{ scale: 1.02 }} className="rounded-lg md:col-span-2 mt-12 md:mt-0 md:py-2 h-[150px] md:h-[550px] hidden md:block">
+        <motion.div initial={{scale: 0.9}}  whileHover={{ scale:0.95 }} className="rounded-lg md:col-span-2 mt-12 md:mt-0 md:py-2 h-[150px] md:h-[550px] hidden md:block">
           <div className="object-scale-down  md:h-full md:w-full md:relative rounded-md">
             {images.map((image, index) => (
               <motion.img
