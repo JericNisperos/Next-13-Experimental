@@ -1,9 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Head from "next/head";
 function about() {
   return (
     <div className="min-h-screen">
+      <Head>
+        <title>MineCommunity About</title>
+        <meta name="description" content="Made by Cyanice Blitz Corps" />
+      </Head>
       <>
         <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-10 mb-16 mt-12">
           <motion.div className="overflow-hidden" initial={{ opacity: 0, y: "10%" }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}>
@@ -13,7 +18,7 @@ function about() {
             </div>
           </motion.div>
           <motion.div className="cursor-default" initial={{ opacity: 0, y: "10%" }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } }}>
-            <div class="font-bold uppercase text-gray-500">MineCommunity About</div>
+            <div class="font-bold uppercase text-gray-500">MineCommunity</div>
             <div class="text-5xl font-bold text-white">Who we are?</div>
           </motion.div>
         </div>

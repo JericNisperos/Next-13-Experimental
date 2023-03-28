@@ -11,7 +11,8 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        {/* <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" /> */}
+        <title>MineCommunity</title>
+        <meta name="description" content="Made by Cyanice Blitz Corps" />
       </Head>
       <Navbar />
       <Component {...pageProps} />
