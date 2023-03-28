@@ -7,18 +7,20 @@ function shop() {
   return (
     <div className="min-h-screen">
       <motion.div>
-      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-10 mb-16 mt-12">
-        <motion.div className="overflow-hidden" initial={{ opacity: 0, y: "10%" }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}>
-        </motion.div>
-        <motion.div className="cursor-default" initial={{ opacity: 0, y: "10%" }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } }}>
-          {/* <div class="font-bold uppercase text-gray-500">MineCommunity Shop</div> */}
-          <div class="text-5xl font-bold text-white">Server Shop</div>
-        </motion.div>
-      </div>
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-10 mb-16 mt-12">
+          <motion.div className="overflow-hidden" initial={{ opacity: 0, y: "10%" }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}></motion.div>
+          <motion.div className="cursor-default" initial={{ opacity: 0, y: "10%" }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } }}>
+            {/* <div class="font-bold uppercase text-gray-500">MineCommunity Shop</div> */}
+            <div class="text-5xl font-bold text-white">Server Shop</div>
+          </motion.div>
+        </div>
+      </motion.div>
+      <motion.div className=" flex mx-auto justify-center">
+        <div className="md:mx-96 rounded-lg bg-blue-400 px-48 py-8 text-2xl font-bold text-center text-white">Donor Ranks are on <span className="text-yellow-400">30%</span> off!</div>
       </motion.div>
       <motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:mx-48 mt-12 overflow-hidden">
-          <ShopItems title="Ranks" bgcolor="bg-red-400" id="shopranks-sprite" delay={0} alt="rules" />
+          <ShopItems title="Ranks" bgcolor="bg-red-400" id="shopranks-sprite" delay={0} alt="ranks" />
           <ShopItems title="Keys" bgcolor="bg-purple-400" id="enchant-sprite" delay={0.1} alt="enchants" />
           <ShopItems title="Packages" bgcolor="bg-blue-300" id="sets-sprite" delay={0.2} alt="esets" />
         </div>

@@ -30,7 +30,7 @@ function about() {
           <motion.div initial={{ opacity: 0, y: "10%" }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6 } }}>
             <ul className="list-none gap-2 text-lg items-center text-justify mx-4 md:mx-96 md:px-48 mt-12 text-zinc-300">
               <li className="mt-4">
-                &nbsp;&nbsp;&nbsp;&nbsp;Welcome to MineCommunity, a small but thriving community of Minecraft players that started with a group of friends in August 2019. What began as a small group of like-minded individuals has grown into
+                &nbsp;&nbsp;&nbsp;&nbsp;A small but thriving community of Minecraft players that started with a group of friends in August 2019. What began as a small group of like-minded individuals has grown into
                 a diverse community of players from all corners of the world.
               </li>
               <li className="mt-4">
