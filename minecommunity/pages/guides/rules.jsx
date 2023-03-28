@@ -1,10 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import GuideItems from "../components/GuideItems";
+import GuidesBack from "../components/GuidesBack";
 
 function rules() {
   return (
     <>
+    <GuidesBack />
       <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-10 mb-16 mt-12">
         <motion.div className="overflow-hidden" initial={{ opacity: 0, y: "10%" }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}>
           <div className={`h-[150px] w-[150px] flex rounded-lg bg-red-400`}>

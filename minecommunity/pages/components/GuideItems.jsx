@@ -20,7 +20,7 @@ function GuideItems({ title, bgcolor, id, delay, alt }) {
 
   return (
     <div>
-      <Link href={`/guides/${alt}`}>
+      <Link href={{ pathname: `/guides/${alt}`, query: { color: bgcolor } }}>
         <motion.div className="overflow-hidden" whileHover={{ scale: 0.97 }} initial={{ opacity: 0, y: "10%" }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: delay } }}>
           <div className={`h-[250px] w-[250px] flex mx-auto rounded-lg cursor-pointer ${bgcolor}`}>
             <motion.span initial={{ scale: 1.5 }} id={id} className="w-[100px] text-center items-center flex mx-auto my-auto"></motion.span>
