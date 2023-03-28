@@ -26,12 +26,12 @@ function ServerInfo() {
   };
 
   return (
-    <motion.div initial={{ y: "10%" }} animate={{ y: 0 }} transition={{ duration: 0.5 }} className="border-red-400 px-8 py-4 md:mx-96 cursor-default bg-zinc-800 rounded-lg">
+    <motion.div initial={{ y: "10%" }} animate={{ y: 0 }} transition={{ duration: 0.5 }} className="border-red-400 px-8 py-4 md:mx-96 cursor-default rounded-lg">
       {/* <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className=" flex text-4xl font-proxima"></motion.div> */}
-      <div className="grid grid-cols-1 lg:grid-cols-1">
-        <div className="rounded-lg flex flex-col justify-center items-center md:mx-4 ">
-          <h1 className="text-red-400 text-xl md:text-4xl font-extrabold items-center justify-center text-center">⚔︎ 1.19.4 Survival Guild Realms</h1>
-          <p className="my-6 md:mx-4 text-justify text-m">
+      <div className="grid grid-cols-1">
+        <div className="rounded-lg flex-col justify-center items-center md:mx-4 ">
+          <h1 className="text-white text-xl md:text-4xl font-extrabold items-center justify-center md:px-54 flex-none bg-red-400 text-center">⚔︎ 1.19.4 Survival Guild Realms</h1>
+          <p className="my-6 md:mx-4 text-justify text-2xl">
             &nbsp;&nbsp;&nbsp;&nbsp;A thrilling Survival Realms that offers a unique and immersive RPG gameplay experience. Here, players can create powerful <span className="text-lime-400">Guilds</span> to play with friends and conquer
             enemies as a team. With the added feature of <span className="text-blue-500">Pets</span>, players can train and customize their companions to aid them in their <span className="text-orange-400">Quests</span>. The server also
             includes <span className="text-purple-400">Custom Enchantments</span> and unique <span className="text-yellow-400">Skills</span> to add to the excitement. In order to unlock new features, players must
@@ -39,15 +39,15 @@ function ServerInfo() {
             battle fierce <span className="text-red-400">Bosses</span> to obtain <span className="text-green-400">Relic Items</span> and gain even more power. So join us on the 1.19.4 Minecraft Server and let the adventure begin!
           </p>
           <div className="grid grid-cols-1 nd:grid-cols-2 md:px-24">
-          <motion.p whileHover={{ scale: 1.1 }} className="md:text-xl font-extrabold cursor-pointer text-center flex mx-auto">
-            <span className="text-red-400">JAVA: </span> play.mine-smp.me <span className="text-gray-500">(1.8 - 1.19.4)</span>
-          </motion.p>
-          <motion.p whileHover={{ scale: 1.1 }} className="md:text-xl font-extrabold cursor-pointer">
-            <span className="text-red-400">BEDROCK:</span> mine-smp.me <span className="text-gray-500">Port: 25569</span>
-          </motion.p>
+            <motion.p whileHover={{ scale: 1.1 }} className="md:text-3xl font-extrabold cursor-pointer text-center flex mx-auto">
+              <span className="text-red-400">JAVA: </span> play.mine-smp.me <span className="text-gray-500">(1.8 - 1.19.4)</span>
+            </motion.p>
+            <motion.p whileHover={{ scale: 1.1 }} className="md:text-3xl font-extrabold cursor-pointer  flex mx-auto">
+              <span className="text-red-400">BEDROCK:</span> mine-smp.me <span className="text-gray-500">Port: 25569</span>
+            </motion.p>
           </div>
         </div>
-        <motion.div whileHover={{ scale: 1.02 }} className="rounded-lg md:col-span-2 mt-12 md:mt-0 md:py-2 h-[250px] md:h-[580px] hidden md:block">
+        <motion.div whileHover={{ scale: 1.02 }} className="rounded-lg md:col-span-2 mt-12 md:mt-0 md:py-2 h-[150px] md:h-[550px] hidden md:block">
           <div className="object-scale-down  md:h-full md:w-full md:relative rounded-md">
             {images.map((image, index) => (
               <motion.img

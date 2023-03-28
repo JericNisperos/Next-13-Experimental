@@ -19,7 +19,7 @@ function guides() {
           <GuideItems title="Rankup" bgcolor="bg-zinc-400" id="rankup-sprite" delay={0.6}  alt="rankup"/>
           <GuideItems title="Relics" bgcolor="bg-lime-300" id="relics-sprite" delay={0.7}  alt="relics"/>
           <GuideItems title="Others" bgcolor="bg-purple-300" id="others-sprite" delay={0.8}  alt="others"/>
-          <GuideItems title="Tutorials" bgcolor="bg-purple-300" id="others-sprite" delay={0.8}  alt="tutorials"/>
+          {/* <GuideItems title="Tutorials" bgcolor="bg-purple-300" id="others-sprite" delay={0.8}  alt="tutorials"/> */}
         </div>
       </motion.div>
     </div>
