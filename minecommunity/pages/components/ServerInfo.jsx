@@ -32,8 +32,8 @@ function ServerInfo() {
       </motion.div>
       <div className="grid grid-cols-1">
         <div className="rounded-lg flex-col justify-center items-center md:mx-4 ">
-          <h1 className="text-white text-3xl md:text-6xl font-extrabold items-center justify-center py-4 md:py-0 md:px-54 flex-none border-b-4 border-red-400 text-center">⚔︎ 1.19.4 Survival Guild Realms</h1>
-          <p className="my-6 md:mx-4 text-justify text-lg md:text-2xl">
+          <h1 className="text-red-400 text-3xl md:text-6xl font-extrabold items-center justify-center py-4 md:py-0 md:px-54 flex-none border-b-8 text-center uppercase">⚔︎ 1.19.4 Survival Guild Realms</h1>
+          <p className="my-6 md:mx-4 text-justify text-lg md:text-2xl text-zinc-300">
             &nbsp;&nbsp;&nbsp;&nbsp;A thrilling Survival Realms that offers a unique and immersive RPG gameplay experience. Here, players can create powerful <span className="text-lime-400">Guilds</span> to play with friends and conquer
             enemies as a team. With the added feature of <span className="text-blue-500">Pets</span>, players can train and customize their companions to aid them in their <span className="text-orange-400">Quests</span>. The server also
             includes <span className="text-purple-400">Custom Enchantments</span> and unique <span className="text-yellow-400">Skills</span> to add to the excitement. In order to unlock new features, players must
@@ -42,10 +42,10 @@ function ServerInfo() {
           </p>
           <div className="grid grid-cols-1 nd:grid-cols-2 md:px-24">
             <motion.p whileHover={{ scale: 1.1 }} className="text-2xl md:text-3xl font-extrabold cursor-pointer text-center flex mx-auto">
-              <span className="text-red-400">JAVA: </span> play.mine-smp.me <span className="text-gray-500">(1.8 - 1.19.4)</span>
+              <span className="text-red-400">JAVA: &nbsp;&nbsp;</span> play.mine-smp.me <span className="text-gray-300">&nbsp;&nbsp;(1.8 - 1.19.4)</span>
             </motion.p>
             <motion.p whileHover={{ scale: 1.1 }} className=" text-2xl md:text-3xl font-extrabold cursor-pointer  flex mx-auto">
-              <span className="text-red-400">BEDROCK:</span> mine-smp.me <span className="text-gray-500">Port: 25569</span>
+              <span className="text-red-400">BEDROCK:&nbsp;&nbsp;</span> mine-smp.me <span className="text-gray-300"> &nbsp;&nbsp; Port: 25569</span>
             </motion.p>
           </div>
         </div>
