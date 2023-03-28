@@ -39,7 +39,7 @@ function Navbar() {
       <Head>{/* <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" /> */}</Head>
       <main>
         <div>
-          <nav className="w-full shadow">
+          <nav className="w-full shadow z-50">
             <div className="justify-between px-4 lg:max-w-5 lg:items-center lg:flex lg:px-8 lg:mx-48">
               <div alt="Icon and Name" className="flex items-center justify-between py-3 md:py-5 md:block flex-no-wrap">
                 <motion.div whileHover={{ scale: 1.1, transition: { duration: 0.5 } }} transition={{ type: "spring", stiffness: 200, damping: 10 }} className="flex items-center">

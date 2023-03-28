@@ -27,11 +27,11 @@ function ServerInfo() {
 
   return (
     <motion.div initial={{ y: "10%" }} animate={{ y: 0 }} transition={{ duration: 0.5 }} className="border-red-400 px-8 py-4 md:mx-96 cursor-default rounded-lg">
-      {/* <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className=" flex text-4xl font-proxima"></motion.div> */}
+      <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="flex text-4xl font-proxima text-center mx-auto justify-center mb-4">✦✦✦</motion.div>
       <div className="grid grid-cols-1">
         <div className="rounded-lg flex-col justify-center items-center md:mx-4 ">
-          <h1 className="text-white text-xl md:text-4xl font-extrabold items-center justify-center md:px-54 flex-none bg-red-400 text-center">⚔︎ 1.19.4 Survival Guild Realms</h1>
-          <p className="my-6 md:mx-4 text-justify text-2xl">
+          <h1 className="text-white text-3xl md:text-6xl font-extrabold items-center justify-center py-4 md:py-0 md:px-54 flex-none border-b-4 border-red-400 text-center">⚔︎ 1.19.4 Survival Guild Realms</h1>
+          <p className="my-6 md:mx-4 text-justify text-lg md:text-2xl">
             &nbsp;&nbsp;&nbsp;&nbsp;A thrilling Survival Realms that offers a unique and immersive RPG gameplay experience. Here, players can create powerful <span className="text-lime-400">Guilds</span> to play with friends and conquer
             enemies as a team. With the added feature of <span className="text-blue-500">Pets</span>, players can train and customize their companions to aid them in their <span className="text-orange-400">Quests</span>. The server also
             includes <span className="text-purple-400">Custom Enchantments</span> and unique <span className="text-yellow-400">Skills</span> to add to the excitement. In order to unlock new features, players must
