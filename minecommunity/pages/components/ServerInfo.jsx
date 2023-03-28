@@ -27,7 +27,9 @@ function ServerInfo() {
 
   return (
     <motion.div initial={{ y: "10%" }} animate={{ y: 0 }} transition={{ duration: 0.5 }} className="border-red-400 px-8 py-4 md:mx-96 cursor-default rounded-lg">
-      <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="flex text-4xl font-proxima text-center mx-auto justify-center mb-4">✦✦✦</motion.div>
+      <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="flex text-4xl font-proxima text-center mx-auto justify-center mb-4">
+        ✦✦✦
+      </motion.div>
       <div className="grid grid-cols-1">
         <div className="rounded-lg flex-col justify-center items-center md:mx-4 ">
           <h1 className="text-white text-3xl md:text-6xl font-extrabold items-center justify-center py-4 md:py-0 md:px-54 flex-none border-b-4 border-red-400 text-center">⚔︎ 1.19.4 Survival Guild Realms</h1>
@@ -39,10 +41,10 @@ function ServerInfo() {
             battle fierce <span className="text-red-400">Bosses</span> to obtain <span className="text-green-400">Relic Items</span> and gain even more power. So join us on the 1.19.4 Minecraft Server and let the adventure begin!
           </p>
           <div className="grid grid-cols-1 nd:grid-cols-2 md:px-24">
-            <motion.p whileHover={{ scale: 1.1 }} className="md:text-3xl font-extrabold cursor-pointer text-center flex mx-auto">
+            <motion.p whileHover={{ scale: 1.1 }} className="text-2xl md:text-3xl font-extrabold cursor-pointer text-center flex mx-auto">
               <span className="text-red-400">JAVA: </span> play.mine-smp.me <span className="text-gray-500">(1.8 - 1.19.4)</span>
             </motion.p>
-            <motion.p whileHover={{ scale: 1.1 }} className="md:text-3xl font-extrabold cursor-pointer  flex mx-auto">
+            <motion.p whileHover={{ scale: 1.1 }} className=" text-2xl md:text-3xl font-extrabold cursor-pointer  flex mx-auto">
               <span className="text-red-400">BEDROCK:</span> mine-smp.me <span className="text-gray-500">Port: 25569</span>
             </motion.p>
           </div>
