@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 function DiscordJoin() {
   return (
-    <div>
+    <div className="md:mx-12">
       <motion.div initial={{ y: "10%" }} animate={{ y: 0 }} transition={{ duration: 0.5 }} className="  rounded-lg mx-auto p-8 grid grid-cols-1 lg:grid-cols-3 md:mx-96 mt-8 cursor-default ">
         <motion.div whileHover={{ scale: 1.5 }} initial={{ y: "10%" }} animate={{ y: 0, scale: 1.7 }} transition={{ duration: 0.5 }} className="rounded-lg flex flex-col justify-center items-center mx-4 ">
           <Image src="https://cdn.discordapp.com/attachments/1083083786704658472/1089805740874670091/image.png" width={1000} height={1000} className="md:mt-8"/>
