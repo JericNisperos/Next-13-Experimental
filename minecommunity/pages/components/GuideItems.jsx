@@ -25,7 +25,7 @@ function GuideItems({ title, bgcolor, id, delay, alt }) {
           <div className={`h-[250px] w-[250px] flex mx-auto rounded-lg cursor-pointer ${bgcolor}`}>
             <motion.span initial={{ scale: 1.5 }} id={id} className="w-[100px] text-center items-center flex mx-auto my-auto"></motion.span>
           </div>
-          <div className="text-white text-3xl mx-auto flex justify-center font-extrabold">{title}</div>
+          <div className="text-white text-3xl mx-auto flex justify-center font-extrabold capitalize">{title}</div>
         </motion.div>
       </Link>
     </div>
