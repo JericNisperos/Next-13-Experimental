@@ -33,24 +33,26 @@ function HomePage() {
   return (
     <div className="text-white">
       <motion.div className=" mx-auto justify-center items-center flex flex-nowrap rounded-md content-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-        <motion.div className=""> 
-        {/* whileHover={{ scale: 1.03 }} */}
-          <Image className="rounded-md " src="https://media.discordapp.net/attachments/1083083786704658472/1083083816475840512/wwwww.png?width=1084&height=610" alt="cover" width="1084" height="610" />
+        <motion.div 
+                // whileHover={{ scale: 1.03 }}
+
+        className="min-h-screen mt-12"> 
+          <Image className="rounded-md relative" src="https://media.discordapp.net/attachments/1083083786704658472/1083083816475840512/wwwww.png?width=1084&height=610" alt="cover" width="1084" height="610" />
         </motion.div>
       </motion.div>
 
-      <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-white flex text-2xl font-proxima font-extrabold mt-2">
+      {/* <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-white flex text-2xl font-proxima font-extrabold mt-2">
         <h1 className="flex mx-auto content-center text-center text-xl md:text-1xl">MineCommunity</h1>
       </motion.div>
       <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-white flex italic font-proxima">
         <h1 className="flex mx-auto content-center text-center text-md">"Mining Creativity, Building Community"</h1>
-      </motion.div>
+      </motion.div> */}
       {/* <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className=" flex text-4xl mt-8 md:mt-12 font-proxima">
         <h1 className="flex mx-auto content-center text-center text-zinc-200"></h1>
       </motion.div> */}
 
-      <ServerInfo />
-        <DiscordJoin />
+      {/* <ServerInfo /> */}
+        {/* <DiscordJoin /> */}
     </div>
   );
 }
