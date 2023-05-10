@@ -18,19 +18,20 @@ function stats() {
   const [stats, setStats] = useState("");
   const [stats2, setStats2] = useState("");
   const [playerName, setPlayerName] = useState();
+  
   useEffect(() => {
     async function fetchData() {
       const data1 = await fetch("/api/plan");
       const res1 = await data1.json();
-      const data2 = await fetch("/api/plan-extend");
-      const res2 = await data2.json();
+      // const data2 = await fetch("/api/plan-extend");
+      // const res2 = await data2.json();
       setStats(res1);
-      setStats2(res2);
+      // setStats2(res2);
       setTotalPlayers(res1.numbers.online_players);
     }
     fetchData();
   }, [totalPlayers]);
-  console.log(stats2);
+  // console.log(stats2);
   const dateToday = new Date().toLocaleString("en-US", { month: "short", day: "numeric", year: "numeric" });
   function DataItems({ icon, title, value }) {
     return (
@@ -69,7 +70,7 @@ function stats() {
             <div class="col-span-1 text-lg md:text-2xl font-bold text-white grid grid-cols-1 text-center items-center">
               <p>Player Search </p>
               <form className="mx-8 md:mx-auto items-center flex justify-center" onSubmit={SearchPlayer}>
-              <input 
+              <input required
               onChange={(e) => {setPlayerName(e.target.value)}}
               className="rounded-bl-lg rounded-tl-lg border-blue-400 text-black px-2 py-2 bg-blue-200" />
               <button className="rounded-br-lg rounded-tr-lg bg-blue-400 p-2">

@@ -65,9 +65,9 @@ function Navbar() {
                         <div className="bg-blue-500 px-4 py-2 items-center justify-between rounded-md cursor-pointer bg-discord"  href="https://discord.com/invite/minecommunity" target="_blank">
                           <FontAwesomeIcon icon={faDiscord} />
                         </div>
-                        <div>
+                        <div className="">
                           <motion.a
-                            className="text-white font-extrabold px-3 py-2 bg-blue-500  rounded-md border-solid border-2 border-blue-500 cursor-pointer"
+                            className="text-white font-extrabold px-3 py-2 bg-blue-500  rounded-md border-solid border-2 border-blue-500 cursor-pointer flex"
                             onClick={() => {
                               navigator.clipboard.writeText("play.mine-smp.me");
                               IPAddress === "PLAY.MINE-SMP.ME" ? setIPAddress("📋 Copied!") : setIPAddress("PLAY.MINE-SMP.ME");
