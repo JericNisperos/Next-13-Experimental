@@ -120,7 +120,7 @@ function stats() {
         </motion.div>
       </div>
       {loading ? (
-        <div>loading...</div>
+        <div className="items-center w-full mx-auto flex mt-24 text-center justify-center text-white text-4xl">Loading Data. Please wait.</div>
       ) : (
         <>
           <div>

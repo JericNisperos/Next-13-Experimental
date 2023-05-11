@@ -71,12 +71,11 @@ function ShopMain(context) {
               {stats?.info.online ? <div className="rounded-full bg-green-400 w-4 h-4 tooltip"><span className="tooltiptext">Online</span></div> : <div className="rounded-full bg-red-400 w-4 h-4 tooltip"><span className="tooltiptext">Offline</span></div>}
             </div>
           ) : (
-            <div className="text-5xl font-bold text-white ">{query.playerID}</div>
+            <div className="text-5xl font-bold text-white text-center md:text-left ">{query.playerID}</div>
           )}
-          <div className="flex">
-            <div className="font-bold uppercase text-gray-500">{stats?.extensions?.[0].extensionData?.[12].tabs?.[0].values?.[0].value ? stats?.extensions?.[0].extensionData?.[12].tabs?.[0].values?.[0].value.replace("default,", "").replace("default","beginner") : "MINECOMMUNITY"}</div>
+          <div className="flex mx-auto justify-center md:mx-none md:justify-normal">
+            <div className="font-bold uppercase text-gray-500">{stats?.extensions?.[0].extensionData?.[12].tabs?.[0].values?.[0].value ? stats?.extensions?.[0].extensionData?.[12].tabs?.[0].values?.[0].value.replace("default,", "").replace("default","beginner") : "UNRANKED"}</div>
           </div>
-          {/* <div className="font-bold uppercase text-gray-500">{stats?.info?.online}</div> */}
         </motion.div>
       </div>
       <div>
