@@ -13,7 +13,7 @@ function DiscordJoin() {
           <p className="my-6 mx-4 text-justify text-m"></p>
         </motion.div>
         <div className="rounded-lg col-span-2 mt-0 md:py-2">
-          <a className="text-white text-2xl md:text-4xl font-black items-center rounded-lg bg-discord px-4 justify-center flex mx-auto py-4 md:py-0" href="https://discord.com/invite/minecommunity" target="_blank">
+          <a className="text-white text-2xl md:text-4xl font-black items-center rounded-lg bg-discord px-4 justify-center flex mx-auto py-4 md:py-0" href="https://discord.gg/dBHZtQcMsW" target="_blank">
           <FontAwesomeIcon icon={faDiscord} /> &nbsp;&nbsp; Join us on Discord!
           </a>
           <div className="md:h-full md:w-full md:relative rounded-md text-justify text-lg text-zinc-400 md:text-xl mt-2">

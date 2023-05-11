@@ -55,14 +55,14 @@ function Navbar() {
               <div alt="Navbar Options" className={` ${!navMobile ? "hidden md:block" : " "}`}>
                 <motion.div initial={{ opacity: 1, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
                   <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 `}>
-                    <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-xl">
+                    <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-lg">
                       <NavItems href="/" icon={faHouse} title="HOME" />
                       <NavItems href="/shop" icon={faShop} title="SHOP" />
                       <NavItems href="/guides" icon={faGamepad} title="GUIDES" />
                       <NavItems href="/about" icon={faPeopleGroup} title="ABOUT" />
                       <NavItems href="/stats" icon={faSortAmountUp} title="STATISTICS" />
                       <div className={`text-white items-center flex justify-between mx-4 ${!navMobile ? "hidden" : " "}`}>
-                        <div className="bg-blue-500 px-4 py-2 items-center justify-between rounded-md cursor-pointer bg-discord"  href="https://discord.com/invite/minecommunity" target="_blank">
+                        <div className="bg-blue-500 px-4 py-2 items-center justify-between rounded-md cursor-pointer bg-discord"  href="https://discord.gg/dBHZtQcMsW" target="_blank">
                           <FontAwesomeIcon icon={faDiscord} />
                         </div>
                         <div className="">
@@ -82,7 +82,7 @@ function Navbar() {
                 </motion.div>
               </div>
               <div alt="discord tska IP" className="hidden lg:block">
-                <a className="text-white mx-4 bg-discord px-3 py-2 rounded-lg cursor-pointer " href="https://discord.com/invite/minecommunity" target="_blank">
+                <a className="text-white mx-4 bg-discord px-3 py-2 rounded-lg cursor-pointer " href="https://discord.gg/dBHZtQcMsW" target="_blank">
                   <FontAwesomeIcon icon={faDiscord} />
                 </a>
                 <motion.a
