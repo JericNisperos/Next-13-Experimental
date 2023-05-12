@@ -55,7 +55,7 @@ function Navbar() {
               <div alt="Navbar Options" className={` ${!navMobile ? "hidden md:block" : " "}`}>
                 <motion.div initial={{ opacity: 1, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
                   <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 `}>
-                    <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-lg">
+                    <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-base">
                       <NavItems href="/" icon={faHouse} title="HOME" />
                       <NavItems href="/shop" icon={faShop} title="SHOP" />
                       <NavItems href="/guides" icon={faGamepad} title="GUIDES" />
@@ -67,13 +67,15 @@ function Navbar() {
                         </div>
                         <div className="">
                           <motion.a
-                            className="text-white font-extrabold px-3 py-2 bg-blue-500  rounded-md border-solid border-2 border-blue-500 cursor-pointer flex"
+                            className="text-white font-extrabold px-3 py-2 bg-blue-500  rounded-md border-solid border-2 border-blue-500 cursor-pointer flex xl:text-sm"
                             onClick={() => {
                               navigator.clipboard.writeText("play.mine-smp.me");
                               IPAddress === "PLAY.MINE-SMP.ME" ? setIPAddress("📋 Copied!") : setIPAddress("PLAY.MINE-SMP.ME");
                             }}
                           >
-                            {IPAddress}&nbsp; | <FontAwesomeIcon icon={faPerson} size="xs" /> {totalPlayers}
+                            
+
+                            {IPAddress}&nbsp; <span className="hidden md:block">| <FontAwesomeIcon icon={faPerson} size="xs" /> {totalPlayers}</span>
                           </motion.a>
                         </div>
                       </div>

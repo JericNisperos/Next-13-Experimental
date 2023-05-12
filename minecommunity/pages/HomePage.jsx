@@ -31,12 +31,12 @@ function HomePage() {
   };
 
   return (
-    <div className="text-white">
+    <div className="text-white max-w-[1446px]">
       <motion.div className=" mx-auto justify-center items-center flex flex-nowrap rounded-md content-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
         <motion.div 
                 // whileHover={{ scale: 1.03 }}
 
-        className="min-h-screen mt-12"> 
+        className="min-h-screen mt-12 max-w-[1446px]"> 
           <Image className="rounded-md relative" src="https://media.discordapp.net/attachments/1083083786704658472/1083083816475840512/wwwww.png?width=1084&height=610" alt="cover" width="1084" height="610" />
         </motion.div>
       </motion.div>

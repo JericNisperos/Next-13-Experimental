@@ -150,11 +150,12 @@ function PlayerDataViewer(context) {
                       value={`${stats?.kill_data?.player_kills_total.toLocaleString("en-US")} K / ${stats?.kill_data?.player_deaths_total} D / ${stats?.kill_data?.player_kdr_total} Ratio`}
                     /> */}
                     {/* <DataItems icon={<IoPeople />} title="Mob KDR:" value={`${stats?.kill_data?.mob_kills_total.toLocaleString("en-US")} / ${stats?.kill_data?.mob_deaths_total} / ${stats?.kill_data?.mob_kdr_total} `} /> */}
-                    <DataItems icon={<IoPeople />} title="Money:" value={`₱ ${stats?.extensions?.[0].extensionData?.[4].tabs?.[0]?.values?.[0].value.toLocaleString()}`} />
+                    <DataItems icon={<IoPeople />} title="Money:" value={`₱ ${stats?.extensions?.[0].extensionData?.[4].tabs?.[0]?.values?.[0].value.toLocaleString("en-US")}`} />
                     {/* <div className="border border-gray-700 mx-8"></div> */}
 
                     {/* <DataItems icon={<IoPeople />} title="Jobs:" value={`${stats?.extensions?.[0].extensionData?.[6].tabs?.[0].values?.[0]?.value?.toLocaleString()}`} /> */}
-                    <DataItems icon={<IoPeople />} title="Playtime:" value={`${stats?.extensions?.[0].extensionData?.[13].tabs?.[0].values?.[4]?.value?.toLocaleString()}`} />
+                    {/* <DataItems icon={<IoPeople />} title="Playtime:" value={`${stats?.extensions?.[0].extensionData?.[13].tabs?.[0].values?.[4]?.value?.toLocaleString()}`} /> */}
+                    <DataItems icon={<IoPeople />} title="Playtime:" value={`${stats?.info?.playtime?.toLocaleString()}`} />
                     <DataItems icon={<IoPeople />} title="Last Seen:" value={`${ stats?.info?.last_seen}`} />
                     {/* stats?.info.online */}
                     <DataItems icon={<IoPeople />} title="Job Level:" value={`${stats?.extensions?.[0].extensionData?.[13].tabs?.[0].values?.[2]?.value?.toLocaleString() + " Levels" || 0}`} />
