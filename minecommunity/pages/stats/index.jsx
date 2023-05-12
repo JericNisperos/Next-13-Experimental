@@ -59,7 +59,6 @@ function stats() {
     fetchData();
   }, [totalPlayers]);
 
-  console.log(recentSearches);
   const dateToday = new Date().toLocaleString("en-US", { month: "short", day: "numeric", year: "numeric" });
 
   function SearchPlayer(e) {
@@ -67,7 +66,7 @@ function stats() {
 
     let recentSearches = JSON.parse(localStorage.getItem("recentSearch")) || [];
     if (!recentSearches.includes(playerName)) {
-      if (recentSearches.length === 2) {
+      if (recentSearches.length === 3) {
         recentSearches.shift();
       }
       recentSearches.push(playerName);
@@ -108,7 +107,7 @@ function stats() {
 
               {/* ))} */}
             </form>
-            <div className="flex text-sm text-white font-semibold gap-4 mx-24">
+            <div className="flex text-sm text-white font-semibold gap-4 mx-auto text-center">
               {recentSearches.length > 0 ? <p className="flex">Recent:</p> : <p></p>}
               {recentSearches.map((search, index) => (
                 <button key={index} onClick={SearchRecentPlayer} className="text-blue-400">
@@ -185,7 +184,7 @@ function stats() {
                   </div>
                 </div>
 
-                <div className="col-span-1 rounded-lg bg-blue-100 shadow-md shadow-white">
+                <div className="col-span-1 rounded-lg bg-blue-100">
                   <div className="flex px-4 text-center justify-center py-4 rounded-tl-lg rounded-tr-lg bg-blue-400">
                     <p className="text-lg md:text-2xl text-white font-semibold">Last 7 Days</p>
                   </div>

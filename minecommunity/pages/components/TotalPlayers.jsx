@@ -9,7 +9,7 @@ function TotalPlayers() {
       const data = await fetch(`http://play.mine-smp.me:25571/v1/serverOverview?server=MineCommunity%20Guilds`);
       const res = await data.json();
       setTotalPlayers(res.numbers.online_players);
-      console.log(totalPlayers);
+      // console.log(totalPlayers);
     }
 
     fetchData();
