@@ -5,7 +5,6 @@ export default async function handler(req = {}, res = {}) {
   
     res.json(data);
   }
-  
   export const config = {
     api: {
       responseLimit: '8MB',
