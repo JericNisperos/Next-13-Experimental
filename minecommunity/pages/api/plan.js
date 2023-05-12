@@ -9,6 +9,5 @@
 export default async function handler(req = {}, res = {}) {
   const response = await fetch(`${process.env.PLAN_API}`);
   const data = await response?.json();
-
   res.json(data);
 }
