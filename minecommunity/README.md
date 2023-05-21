@@ -27,5 +27,5 @@ We would like to express our gratitude to the following individuals and projects
 - [Rest API](https://restfulapi.net/)
 - [Framer Motion](https://www.framer.com/motion/)
 
-Thank you for using MineCommunity! We hope you find it valuable and enjoy your experience on our website. If you have any questions or feedback, please don't hesitate to contact us.
-``
+Thank you for playing in MineCommunity! We hope you find it valuable and enjoy your experience on our server. If you have any questions or feedback, please don't hesitate to contact us.
+
