@@ -1,5 +1,5 @@
-##MineCommunity
-#Description
+## MineCommunity
+# Description
 MineCommunity is a production community website that provides users with comprehensive server details and offers an easy-to-use player data search feature. Whether you're a player looking for information on servers or simply curious about the data related to specific players, MineCommunity has got you covered.
 
 #Stacks
