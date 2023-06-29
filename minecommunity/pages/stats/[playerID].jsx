@@ -121,6 +121,7 @@ function PlayerDataViewer(context) {
         </motion.div>
       </div>
       <div>
+        
         {stats?.sessions ? (
           <div>
             <motion.div className="items-center justify-center mb-8" initial={{ opacity: 0, y: "10%" }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.4 } }}>
