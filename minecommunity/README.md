@@ -1,38 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MineCommunity
 
-## Getting Started
+## Link
+- https://minecommunity.jnisperos.space
 
-First, run the development server:
+## Description
+MineCommunity is a production community website that provides users with comprehensive server details and offers an easy-to-use player data search feature. Whether you're a player looking for information on servers or simply curious about the data related to specific players, MineCommunity has got you covered.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Stacks
+MineCommunity is built using the following technologies:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js**: Next.js is a popular React framework that enables server-side rendering (SSR) and provides an efficient and intuitive development experience for building modern web applications.
+- **Tailwind CSS**: Tailwind CSS is a highly customizable CSS framework that allows developers to rapidly build user interfaces using utility classes. It offers a wide range of pre-defined styles and facilitates responsive design.
+- **Rest API**: MineCommunity utilizes a RESTful API architecture to handle server and player data requests. This enables efficient communication between the front-end and back-end, ensuring smooth data retrieval and updates.
+- **Framer Motion**: Framer Motion is a powerful animation library for React applications. It enables developers to create smooth and engaging animations, enhancing the user experience and adding visual appeal to the website.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Features
+- **Server Details**: MineCommunity provides comprehensive information about various Minecraft servers. Users can browse through different servers, view their descriptions, player counts, and other relevant details.
+- **Player Data Search**: Users can easily search for specific player data on MineCommunity. Whether it's finding statistics, achievements, or other information associated with a player, the search feature makes it convenient and efficient.
+- **Responsive Design**: MineCommunity is designed with responsiveness in mind, ensuring that the website adapts seamlessly to different screen sizes and devices. Users can enjoy a consistent experience whether they're accessing the site on a desktop computer, tablet, or smartphone.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## License
+The MineCommunity project is licensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to modify and distribute the project under the terms specified in the license.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Acknowledgements
+We would like to express our gratitude to the following individuals and projects for their contributions to MineCommunity:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Rest API](https://restfulapi.net/)
+- [Framer Motion](https://www.framer.com/motion/)
 
-## Learn More
+Thank you for playing in MineCommunity! We hope you find it valuable and enjoy your experience on our server. If you have any questions or feedback, please don't hesitate to contact us.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
