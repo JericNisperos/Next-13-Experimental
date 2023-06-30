@@ -80,7 +80,7 @@ function stats() {
     router.push(`/stats/${searchTerm}`);
   }
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen max-w-[1446px] mx-auto">
       <Head>
         <title>MineCommunity Statistics</title>
         <meta name="description" content="Made by Cyanice Blitz Corps" />
