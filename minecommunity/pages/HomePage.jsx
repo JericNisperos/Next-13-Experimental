@@ -33,7 +33,9 @@ function HomePage() {
   return (
     <>
 <div className="flex justify-center items-center">
-  <motion.div className="w-full h-full flex justify-center items-center">
+  <motion.div 
+  initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
+  className="w-full h-full flex justify-center items-center">
     <Image
       src="https://media.discordapp.net/attachments/1083083786704658472/1083083816475840512/wwwww.png?width=1084&height=610"
       alt="cover"
