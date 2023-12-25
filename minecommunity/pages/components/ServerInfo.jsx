@@ -26,13 +26,14 @@ function ServerInfo() {
   };
 
   return (
-    <motion.div initial={{ y: "10%" }} animate={{ y: 0 }} transition={{ duration: 0.5 }} className="border-red-400 px-8 py-4 md:mx-96 cursor-default rounded-lg">
+    <div className="">
+    <motion.div initial={{ y: "10%" }} animate={{ y: 0 }} transition={{ duration: 0.5 }} className="border-red-400 px-8 py-4 cursor-default rounded-lg">
       <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="flex text-4xl font-proxima text-center mx-auto justify-center mb-4">
         ✦✦✦
       </motion.div>
       <div className="grid grid-cols-1">
         <div className="rounded-lg flex-col justify-center items-center md:mx-4 ">
-          <h1 className="text-red-400 text-3xl md:text-6xl font-extrabold items-center justify-center py-4 md:py-0 md:px-54 flex-none border-b-8 text-center uppercase">⚔︎ 1.19.4 Survival Guild Realms</h1>
+          <h1 className="text-red-400 text-3xl md:text-6xl font-extrabold items-center justify-center py-4 md:py-0 md:px-54 flex-none border-b-8 text-center uppercase">⚔︎ 1.20 Survival Guild Realms</h1>
           <p className="my-6 md:mx-4 text-justify text-lg md:text-2xl text-zinc-300">
             &nbsp;&nbsp;&nbsp;&nbsp;A thrilling Survival Realms that offers a unique and immersive RPG gameplay experience. Here, players can create powerful <span className="text-lime-400">Guilds</span> to play with friends and conquer
             enemies as a team. With the added feature of <span className="text-blue-500">Pets</span>, players can train and customize their companions to aid them in their <span className="text-orange-400">Quests</span>. The server also
@@ -49,7 +50,7 @@ function ServerInfo() {
             </motion.p>
           </div>
         </div>
-        <motion.div initial={{scale: 0.9}}  whileHover={{ scale:0.95 }} className="rounded-lg md:col-span-2 mt-12 md:mt-0 md:py-2 h-[150px] md:h-[550px] hidden md:block">
+        {/* <motion.div initial={{scale: 0.9}}  whileHover={{ scale:0.95 }} className="rounded-lg md:col-span-2 mt-12 md:mt-0 md:py-2 h-[150px] md:h-[550px] hidden md:block">
           <div className="object-scale-down  md:h-full md:w-full md:relative rounded-md">
             {images.map((image, index) => (
               <motion.img
@@ -70,9 +71,11 @@ function ServerInfo() {
               ))}
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </motion.div>
+          
+    </div>
   );
 }
 

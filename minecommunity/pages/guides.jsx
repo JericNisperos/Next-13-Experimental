@@ -8,8 +8,8 @@ function guides() {
   return (
     <div>
       <motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:mx-96 mt-12 overflow-hidden">
-          
+      <div className="mx-auto text-center sm:grid sm:grid-cols-3 gap-12 mt-12 overflow-hidden max-w-6xl">
+
           <GuideItems title="Rules" bgcolor="bg-red-400" id="map-sprite" delay={0} alt="rules"/>
           <GuideItems title="Enchants" bgcolor="bg-purple-400" id="enchant-sprite" delay={0.1}  alt="enchants"/>
           <GuideItems title="Eternal Sets" bgcolor="bg-blue-300" id="sets-sprite" delay={0.2}  alt="esets"/>
