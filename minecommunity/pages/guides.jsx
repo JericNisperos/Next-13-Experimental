@@ -6,9 +6,9 @@ function guides() {
 
   
   return (
-    <div>
+    <div className="">
       <motion.div>
-      <div className="mx-auto text-center sm:grid sm:grid-cols-3 gap-12 mt-12 overflow-hidden max-w-6xl">
+      <div className="mx-auto text-center sm:grid sm:grid-cols-3 gap-12 mt-12 overflow-hidden max-w-6xl ">
 
           <GuideItems title="Rules" bgcolor="bg-red-400" id="map-sprite" delay={0} alt="rules"/>
           <GuideItems title="Enchants" bgcolor="bg-purple-400" id="enchant-sprite" delay={0.1}  alt="enchants"/>

@@ -5,7 +5,7 @@ import GuidesBack from "../components/GuidesBack";
 
 function enchants() {
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto min-h-screen">
       <div className="mx-8">
         <GuidesBack />
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-10 mb-16 mt-12 ">

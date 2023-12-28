@@ -12,7 +12,7 @@ function GuideMain(context) {
      <GuidesBack />
       <div class="mx-auto flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-10 mb-16 mt-12 max-w-6xl ">
         <motion.div className="overflow-hidden" initial={{ opacity: 0, y: "10%" }} animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}>
-          <div className={`h-[150px] w-[150px] flex rounded-lg ${query.color}`}>
+          <div className={`h-[150px] w-[150px] flex rounded-lg bg-slate-300`}>
             <motion.span initial={{ scale: 1.0 }} id={`${query.guideid}-sprite`} className="w-[100px] text-center items-center flex mx-auto my-auto"></motion.span>
           </div>
         </motion.div>

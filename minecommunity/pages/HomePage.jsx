@@ -35,13 +35,23 @@ function HomePage() {
     <>
       <div className="flex justify-center items-center">
         <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="w-full h-full flex justify-center items-center mx-12">
-          <Image src="https://media.discordapp.net/attachments/1083083786704658472/1083083816475840512/wwwww.png?width=1084&height=610" alt="cover" layout="responsive" width={1084} height={610} className="object-cover rounded-lg" />
+          <Image src="https://media.discordapp.net/attachments/1083083786704658472/1083083816475840512/wwwww.png?width=1084&height=610" alt="cover" layout="responsive" width={1084} height={610} className="mx-4 object-cover rounded-lg" />
+
+          {/* <div>
+            <iframe
+              src="https://discord.com/widget?id=611871069413834793&theme=dark"
+              width="350"
+              height="540"
+              allowtransparency="true"
+              frameborder="0"
+              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            ></iframe>
+          </div> */}
         </motion.div>
 
         {/* <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className=" flex text-4xl mt-8 md:mt-12 font-proxima">
         <h1 className="flex mx-auto content-center text-center text-zinc-200"></h1>
       </motion.div> */}
-
       </div>
       <div className="">
         <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-white flex text-2xl font-proxima font-extrabold mt-2">
@@ -51,9 +61,11 @@ function HomePage() {
           <h1 className="flex mx-auto content-center text-center text-md">"Mining Creativity, Building Community"</h1>
         </motion.div>
       </div>
+
       {/* <ServerInfo /> */}
-      <DiscordJoin />
       {/* <ArticleList /> */}
+      {/* <div className="py-16"></div> */}
+      <DiscordJoin />
     </>
   );
 }
