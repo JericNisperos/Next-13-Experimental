@@ -59,7 +59,8 @@ function Navbar() {
                       <NavItems href="/" icon={faHouse} title="HOME" />
                       <NavItems href="/shop" icon={faShop} title="SHOP" />
                       <NavItems href="/guides" icon={faGamepad} title="GUIDES" />
-                      <NavItems href="/about" icon={faPeopleGroup} title="ABOUT" />
+                      {/* <NavItems href="/about" icon={faPeopleGroup} title="ABOUT" /> */}
+                      <NavItems href="/vote" icon={faPeopleGroup} title="VOTE" />
                       <NavItems href="/stats" icon={faSortAmountUp} title="STATISTICS" />
                       <div className={`text-white items-center flex justify-between mx-4 ${!navMobile ? "hidden" : " "}`}>
                         <div className="bg-blue-500 px-4 py-2 items-center justify-between rounded-md cursor-pointer bg-discord" href="https://discord.gg/dBHZtQcMsW" target="_blank">

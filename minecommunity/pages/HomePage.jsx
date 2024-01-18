@@ -5,6 +5,7 @@ import DiscordJoin from "./components/DiscordJoin";
 import Footer from "./components/Footer";
 import ServerInfo from "./components/ServerInfo";
 import ArticleList from "./components/ArticleList";
+import AboutUs from "./components/AboutUs";
 
 function HomePage() {
   const images = [
@@ -66,6 +67,7 @@ function HomePage() {
       {/* <ArticleList /> */}
       {/* <div className="py-16"></div> */}
       <DiscordJoin />
+      <AboutUs />
     </>
   );
 }
